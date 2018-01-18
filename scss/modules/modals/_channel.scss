@@ -44,8 +44,8 @@
 }
 
 #channel_invite_modal {
-  #channel_invite_container:not(.keyboard_active).not_scrolling .channel_invite_row:hover,
-  .channel_invite_row.highlighted {
+  #channel_invite_container:not(.keyboard_active).not_scrolling .channel_invite_row:not(.disabled):hover,
+  .channel_invite_row.highlighted:not(.disabled) {
     background: $color-base;
     border-color: $color-shade-dark;
   }
@@ -68,6 +68,9 @@
     color: $base-font-color;
   }
 
+  &__mute_help_text {
+    color: $color-highlight;
+  }
 }
 
 .channel_prefs_notifications_table {
@@ -91,8 +94,4 @@
 
 .notification_prefs_icon::before {
   color: $base-font-color;
-}
-
-.channel_prefs_body__mute_help_text {
-  color: $color-highlight;
 }

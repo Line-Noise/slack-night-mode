@@ -30,10 +30,18 @@
   .lfs_list .lfs_item {
     &.selected {
       color: $base-font-color;
+
+      .c-member__current-status .prevent_copy_paste,
+      .c-member__current-status--small::before,
+      .c-member__display-name,
+      .c-member__name,
+      .c-member__secondary-name {
+        color: $base-font-color !important;
+      }
     }
 
     &.disabled {
-      color: $base-font-color;
+      color: $color-highlight;
     }
 
     &.active {
@@ -61,20 +69,20 @@
   }
 }
 
-.unify_user #select_share_channels .lazy_filter_select {
+#select_share_channels .lazy_filter_select {
   .lfs_value .lfs_item.selected {
-    color: $base-font-color;
+    color: $base-font-color !important;
 
     .ts_icon:not(.presence_icon) {
-      color: $color-highlight;
+      color: $color-highlight !important;
     }
   }
 
   .lfs_item {
-    color: $base-font-color;
+    color: $color-highlight !important;
 
     .ts_icon:not(.presence_icon) {
-      color: $color-highlight;
+      color: $color-highlight !important;
     }
   }
 }
